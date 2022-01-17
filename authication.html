@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Javascript Login Form Authication</title>
+
+
+</head>
+<body>
+    
+
+<style>
+           .c1{
+               margin: auto;
+               background-color: brown;
+               text-align: center;
+           }  
+           
+</style>
+
+    <table class="c1">
+<form id="form_id" method="post" name="myform">
+    <tr> <td colspan="2"><h2>Javascript Login   Authication</h2></td></tr>
+        <tr>
+<td>User Name : </td> <td><input type="text" name="username" id="username" required/></td>
+</tr> 
+<tr> 
+    <td> password : </td> <td><input type="password" name="password" id="password" required/></td>
+</tr> 
+<tr >
+    <td colspan="2">
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</td>
+</tr>
+</table>
+</form>
+
+
+<script>
+function validate()
+{
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == ""|| password == "")
+{
+    alert (" plz enter your password or username");
+}
+else if ( username == "yash" && password == "abcd")
+{
+alert ("Login successfully");
+location.href = "https://www.w3schools.com";
+return false;
+}
+else
+{
+ 
+    alert (" username and password is incoorect");
+    return false;
+}
+}
+
+</script>
+</body>
+</html>
